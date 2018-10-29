@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<title></title>
+			<meta charset="utf-8">
+
+			<style type="text/css">
+				
+				html {
+					background-color: green;
+				}
+
+				.aikesi {
+
+					width: 100%;
+					height: 200px;
+					background-color: orange;
+					color: #765392;
+					line-height: 200px; 
+					padding-top: 10px;
+					text-align: center;
+					/*margin: 0 auto;*/
+					border-top: 10px solid #000;
+					position: absolute;
+					left: 100px;
+				}
+
+				button {
+
+					width: 100px;
+					height: 30px;
+				}
+			</style>
+</head>
+<body>
+
+	<div class="aikesi">
+		<p> 通过移动端APP和Web端的软件，让顾客直观快捷地了解车辆的使用情况，兼具车内通信、车间通信、车网通信终端，从而实现人机互同时还是让汽车具备IOV寻址和网络可信标识等功能。通过移动端APP和Web软让顾客直观快捷地了解车辆的使用情况，兼具车内通信、车间通信、车网通信终端，从而实现人机互动；同时还是让汽车具备IOV寻址和网络可信标识等功能。</p>
+	</div>
+
+	<button onclick="fun()">开始动画</button>
+
+</body>
+
+		<script type="text/javascript">
+		
+		 
+	 	var box = document.getElementsByTagName("div")[0];
+
+	 	var timer = null;
+
+	  	function fun(){
+
+	  	box.style.left = "0px";
+	  	box.style.top = "0px";
+
+	  	if (timer) {
+	  		clearIntreval(timer);
+	  	}
+
+	  	timer =	setInterval(function(){
+					// 
+	  			if (box.offsetLeft > 500) {
+
+	  				clearIntreval(timer);
+	  				
+	  			}
+	  			box.style.left = parseInt(box.offsetLeft + 1) + "px";
+	  			box.style.top = parseInt(box.offsetTop + 1) + "px";
+
+	  		},1);
+
+	  	}
+
+		//打印函数
+		function log(para){
+
+			console.log(para);
+		}
+
+		</script>
+</html>
